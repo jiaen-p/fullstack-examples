@@ -1,0 +1,16 @@
+clase coche {
+    adj
+    get
+    set
+
+}
+
+clase concesionario{
+    atr [coches]
+    atr nombre concesionario
+    atr direction
+
+    get set
+
+    
+}

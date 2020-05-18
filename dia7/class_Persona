@@ -1,0 +1,18 @@
+clase persona: {
+    edad,
+    sexo,
+    nombre,
+    apellido,
+    aficion,
+    año nacimiento,
+    comida favorita,
+    costumbres,
+    educacion,
+    color favorito,
+    color de ojos,
+    color de pelo,
+    altura,
+    peso,
+    talla de ropa,
+    
+}
