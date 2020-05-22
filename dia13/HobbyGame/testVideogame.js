@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var Person_1 = require("./Person");
+var Platform_1 = require("./Platform");
+var Videogame_1 = require("./Videogame");
+var p1 = new Person_1.Person("Juan", "Español", "developer", 15);
+var p2 = new Person_1.Person("Pablo", "Español", "developer", 10);
+var d1 = new Person_1.Person("Nana", "UK", "director", 5);
+var pcmr = new Platform_1.Platform("PC", 2020, "Any", 64, 10, true, 100, true, "cd", "gris");
+var ps4 = new Platform_1.Platform("ps4", 2015, "sony", 64, 4, true, 120, true, "bluray", "black");
+var tk = new Videogame_1.Videogame("tekken 7", 2018, [p1, p2], "Japan", d1, ["English", "Spanish", "Japanese"], [ps4], 40, 8);
+console.log(p1.getName());
+tk.print();
+console.log(tk.availableInLanguage("German"));
+console.log(tk.developedBy(p1), tk.developedBy(d1));
+console.log(tk.availableInPlatform(pcmr));
