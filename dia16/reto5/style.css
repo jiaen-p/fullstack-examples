@@ -1,0 +1,39 @@
+body{
+    padding: 10px 20px;
+    background-color: ghostwhite;
+}
+.header{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: space-between;
+}
+nav li{
+    display: inline;
+    padding: 0 10px ;
+}
+nav ul{
+    text-align: right;
+    padding-top: 15px ;
+}
+.movie{
+    display: grid;
+    grid-template-columns: 180px 1fr ;
+    margin: 30px 0;
+    padding: 5px 20px 15px;
+    background-color: lightblue;
+    border-radius: 15px;
+    border: 1px solid grey;
+}
+.movie img{
+    width: 120px;
+}
+.info{
+    padding-top: 70px;
+}
+.add{
+    margin: 30px 0;
+    padding: 5px 20px 15px;
+    background-color: lightblue;
+    border-radius: 15px;
+    border: 1px solid grey;
+}

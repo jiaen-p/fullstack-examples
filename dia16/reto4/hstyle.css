@@ -1,0 +1,9 @@
+html{
+    padding:0 20px;
+    background-color: azure;
+}
+.hobbies{
+    background-color: lightblue;
+    padding:1px 20px ;
+    border-radius: 6px;
+}

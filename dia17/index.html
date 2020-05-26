@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8f6804cce5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Travel Agency</title>
+</head>
+<header>
+    <div class="brand">
+        <i class="fas fa-plane-departure"></i>
+        <h3>Travel to Wonderland</h3>
+    </div>
+    <nav class="navigation">
+        <a href="#activity"><i class="fas fa-city"></i>Activities</a>
+        <a href="#reviewName"><i class="fas fa-plus"></i>Comment</a>
+    </nav>
+</header>
+<hr>
+<body>
+    <article>
+        <h2>Down the Rabbit-Hole</h2>
+        <section>
+            <img src="https://www.wallpaperflare.com/static/607/313/127/alice-in-wonderland-cheshire-cat-digital-art-cat-wallpaper.jpg" 
+                width="100%" alt="alice in wonderland">
+            <h4>-- "That depends a good deal on where you want to get to" </h4>
+            <p>“Would you tell me, please, which way I ought to go from here?”
+                “That depends a good deal on where you want to get to,” said the Cat.
+                “I don’t much care where—” said Alice.
+                “Then it doesn’t matter which way you go,” said the Cat.
+                “—so long as I get somewhere,” Alice added as an explanation.
+                “Oh, you’re sure to do that,” said the Cat, “if you only walk long enough.”</p>
+        </section>
+        <section>
+            <img src="https://i.ytimg.com/vi/_gpt2Zb5V5A/maxresdefault.jpg" width="100%" alt="caterpillar">
+            <h4>-- "Who are you?"</h4>
+            <p>This was not an encouraging opening for a conversation. Alice replied, rather shyly, “I—I hardly know, 
+                Sir, just at present—at least I know who I was when I got up this morning, 
+                but I think I must have been changed several times since then.”</p>
+        </section>
+    </article>
+    <article>
+        <h2>Available activities in Wonderland</h2>
+        <section class="activities" id="activity">
+            <div>
+                <h3>Tea time</h3>
+                <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/alice-in-wonderland-tea-party-paper-rose-cottage.jpg" 
+                    width="100%" alt="tea party">
+            </div>
+            <div>
+                <h3>Sightseein castles</h3>
+                <img src="https://i.pinimg.com/originals/15/f8/eb/15f8eb48ca2e0e030dc611d54d0ee871.jpg" 
+                    width="100%" alt="white queen castle">
+            </div>
+            <div>
+                <h3>Chasing white Rabbits</h3>
+                <img src="https://definingwonderland.files.wordpress.com/2012/05/white-rabbit.jpg"
+                    width="100%" alt="white rabbit">
+            </div>
+            <div>
+                <h3>Meeting locals</h3>
+                <img src="https://vignette.wikia.nocookie.net/aliceinwonderland/images/e/ea/Alice561.jpg/revision/latest?cb=20171111214312" 
+                    width="100%" alt="card soldiers">
+            </div>
+        </section>
+    </article>
+    <article>
+        <h2>People that had been to Wonderland</h2>
+        <section id="oldusers">
+            <div class="comments">
+                <p>name: Test1</p>
+                <p>review: asdkjfaksddfkaj</p>
+                <p>level of satisfaction (1/5): 5</p>
+            </div>
+        </section>
+
+        <label for="filter">Click the button if you want the reviews filter the names that contains an r</label>
+        <button onclick=filter() id="filter"><i class="fas fa-filter"></i></button>
+        <br>
+        <hr>
+        <form class="review" method="GET" onsubmit="return false">
+            <div>
+                <label for="reviewName">name:</label>
+                <input type="text" name="name" id="reviewName">
+            </div>
+            <br>
+            <div>
+                <label for="review">review:</label>
+                <textarea name="review" id="review" cols="30" ></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="stars">level of satisfaction</label>
+                <select name="star" id="stars">
+                    <option value=5 selected>5/5</option>
+                    <option value=4>4/5</option>
+                    <option value=3>3/5</option>
+                    <option value=2>2/5</option>
+                    <option value=1>1/5</option>
+                </select>
+            </div>
+            <br>
+            <button type="reset" onclick=addReview()>add</button>
+        </form>
+    </article>
+    <hr>
+</body>
+<script>
+    let review = []
+    function getUsers(){
+        let text = document.getElementById("oldusers").innerHTML
+            text += `
+                <div class="comments">
+                <p> name: ${review[review.length - 1].name}</p>
+                <p> review: ${review[review.length - 1].review} </p>
+                <p> level of satisfaction (1-5): ${review[review.length - 1].stars} </p>
+                </div>
+            `
+        document.getElementById("oldusers").innerHTML = text
+    }
+    function addReview(){
+        let name = document.getElementById("reviewName").value
+        let rev = document.getElementById("review").value
+        let level = document.getElementById("stars").value
+        let json = {"name": name, "review": rev, "stars": level}
+        review.push(json)
+        getUsers()
+    }
+    function filter(){
+
+        let filtered = review.filter(user => !user.name.includes("r")  && !user.name.includes("R") )
+        let text = ''
+        filtered.forEach(user => {
+            text += `
+                <div class="comments">
+                <p> name: ${user.name}</p>
+                <p> review: ${user.review} </p>
+                <p> level of satisfaction (1-5): ${user.stars} </p>
+                </div>
+            `
+        })
+        document.getElementById("oldusers").innerHTML = text
+    }
+</script>
+
+</html>

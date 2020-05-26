@@ -1,0 +1,15 @@
+h1{
+    color: grey;
+}
+p{
+    color: blue;
+}
+ul{
+    list-style: square;
+}
+li{
+    color: brown;
+}
+.container{
+    display: flex;
+}

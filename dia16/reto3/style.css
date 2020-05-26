@@ -1,0 +1,20 @@
+.header{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+#profile{
+    border-radius: 50%;
+    width: 120px;
+}
+html{
+    padding:0 20px;
+    background-color: azure;
+}
+hr{
+    border-top: 5px dotted cadetblue;
+    width: 20%;
+}

@@ -1,0 +1,78 @@
+html{
+    padding:10px 20px;
+}
+.brand{
+    display: grid;
+    grid-template-columns: 30px 190px;
+}
+.fa-plane-departure{
+    padding: 3px 0 0;
+    margin: 0;
+}
+.brand h3{
+    margin: 0;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.navigation{
+    padding: 2px 0 0; 
+    text-align: right;
+}
+.navigation a:link{
+    padding: 0 3px 0;
+    text-decoration: none;
+}
+.fa-plus, .fa-city{
+    font-size: 12px;
+    padding: 0 2px 0;
+}
+img{
+    border-radius: 80%;
+}
+.activities{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1em;
+    justify-items: center;
+}
+.activities div{
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0 10px 6px;
+    margin: 5px 0;
+}
+#oldusers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+}
+.comments{
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 12em;
+    padding-left:5px ;
+}
+.review{
+    text-align: center ;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: lightgray;
+    -webkit-box-shadow: 4px 6px 41px -24px rgba(0,0,0,1);
+    -moz-box-shadow: 4px 6px 41px -24px rgba(0,0,0,1);
+    box-shadow: 4px 6px 41px -24px rgba(0,0,0,1);
+
+}
+.review input,.review textarea{
+    width: 1fr;
+}
+.review div{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+}
+button{
+    padding: 8px 12px;
+}
