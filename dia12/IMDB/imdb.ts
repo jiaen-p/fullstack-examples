@@ -13,8 +13,7 @@ export class Imdb{
     public escribirEnFicheroJson(nombre:string){
         fs.writeJsonSync("./" + nombre + ".json", this.toJSON())
     }
-    public obtenerInstanciaIMSB(nombreFichero: string):Imdb{
-        this.peliculas = fs.readJsonSync("./" + nombreFichero + ".json")
-        return this
+    public static obtenerInstanciaIMSB(nombreFichero: string):Imdb{
+        return new Imdb( fs.readJsonSync("./" + nombreFichero + ".json") )
     }
 }

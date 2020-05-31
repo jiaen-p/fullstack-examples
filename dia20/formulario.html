@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>IMDB</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#"><i class="fas fa-film"></i></a>
+          <a class="navbar-brand" href="#">IMDB</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></i></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a id="home" class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a id="contribute" href="#" class="nav-link contribute">Contribute</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+    </nav>
+    <div id="page">
+        <form>
+            <div class="form-group">
+                <label for="movieTitle">Movie Title</label>
+                <input type="email" class="form-control" id="movieTitle">
+            </div>
+            <div class="form-group">
+                <label for="releaseYear">Year released</label>
+                <input type="number" class="form-control" id="releaseYear">
+            </div>
+            <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <input type="text" class="form-control" id="nationality">
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <input type="text" class="form-control" id="genre">
+            </div>
+            <div class="form-group">
+                <label for="url">Image url</label>
+                <input type="text" class="form-control" id="url">
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="form-group">
+                <label for="directorName">Director name</label>
+                <input type="text" class="form-control" id="directorName">
+            </div>
+            <div class="form-group">
+                <label for="directorAge">Director age</label>
+                <input type="number" class="form-control" id="directorAge">
+            </div>
+            <div class="form-group">
+                <label for="directorGender">Director gender</label>
+                <input type="text" class="form-control" id="directorGender">
+            </div>
+            <div class="form-group">
+                <label for="directorWeight">Director weight</label>
+                <input type="number" class="form-control" id="directorWeight">
+            </div>
+            <div class="form-group">
+                <label for="directorHeight">Director height</label>
+                <input type="number" class="form-control" id="directorHeight">
+            </div>
+            <div class="form-group">
+                <label for="directorHairColor">Director hair color</label>
+                <input type="text" class="form-control" id="directorHairColor">
+            </div>
+            <div class="form-group">
+                <label for="directorEyeColor">Director eye color</label>
+                <input type="text" class="form-control" id="directorEyeColor">
+            </div>
+            <div class="form-group">
+                <label for="directorRace">Director race</label>
+                <input type="text" class="form-control" id="directorRace">
+            </div>
+            <label for="directorIsRetired">Director retired</label>
+            <div class="form-group" id="directorIsRetired">
+                <select type="text" class="form-control" id="directorIsRetired">
+                <option>no</option>    
+                <option>yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="directorNationality">Director nationality</label>
+                <input type="text" class="form-control" id="directorNationality">
+            </div>
+            <div class="form-group">
+                <label for="directorNumOsc">Director number of Oscars won</label>
+                <input type="number" class="form-control" id="directorNumOsc">
+            </div>
+            <br>
+            <hr>
+            <br>
+            <form id="actor-form">
+                <div class="form-group">
+                    <label for="actorName">actor name</label>
+                    <input type="text" class="form-control" id="actorName">
+                </div>
+                <div class="form-group">
+                    <label for="actorAge">actor age</label>
+                    <input type="number" class="form-control" id="actorAge">
+                </div>
+                <div class="form-group">
+                    <label for="actorGender">actor gender</label>
+                    <input type="text" class="form-control" id="actorGender">
+                </div>
+                <div class="form-group">
+                    <label for="actorWeight">actor weight</label>
+                    <input type="number" class="form-control" id="actorWeight">
+                </div>
+                <div class="form-group">
+                    <label for="actorHeight">actor height</label>
+                    <input type="number" class="form-control" id="actorHeight">
+                </div>
+                <div class="form-group">
+                    <label for="actorHairColor">actor hair color</label>
+                    <input type="text" class="form-control" id="actorHairColor">
+                </div>
+                <div class="form-group">
+                    <label for="actorEyeColor">actor eye color</label>
+                    <input type="text" class="form-control" id="actorEyeColor">
+                </div>
+                <div class="form-group">
+                    <label for="actorRace">actor race</label>
+                    <input type="text" class="form-control" id="actorRace">
+                </div>
+                <label for="actorIsRetired">actor retired</label>
+                <div class="form-group" id="actorIsRetired">
+                    <select type="text" class="form-control" id="actorIsRetired">
+                        <option>no</option>    
+                        <option>yes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="actorNationality">actor nationality</label>
+                    <input type="text" class="form-control" id="actorNationality">
+                </div>
+                <div class="form-group">
+                    <label for="actorNumOsc">actor number of Oscars won</label>
+                    <input type="number" class="form-control" id="actorNumOsc">
+                </div>
+                <button id="add-actor" onclick=pushActor() type="button" class="btn btn-primary">Add Another Actor</button>
+            </form>
+            <br>
+            <hr>
+            <br>
+            <button id="add-movie" onclick=addMovie() type="button" class="btn btn-primary">Submit Movie</button>
+        </form>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

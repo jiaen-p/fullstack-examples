@@ -1,0 +1,33 @@
+.card-body{
+    justify-content: space-between;
+}
+#total{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+#total-container{
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    z-index: 1;
+    background-color: aquamarine;
+    height: fit-content;
+    width: fit-content;
+    min-width: 100px;
+    border-radius: 8px;
+    padding: 5px;
+}
+.items{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.items img{
+    width: 60px;
+}
+.items p{
+    align-self: center;
+    margin: 0;
+}

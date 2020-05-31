@@ -1,0 +1,113 @@
+*{
+    font-family: 'Varela Round', sans-serif;
+}
+html{
+    background-color: rgb(255, 255, 255);
+}
+.login{
+    margin-top: 20px;
+    padding: 0 15px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+}
+.login h1{
+    margin: 30px 0 10px;
+    font-size: 23px;
+    font-weight: 700;
+}
+.fa-twitter{
+    font-size: 2.5em;
+    color:rgba(29,161,242,1.00) ;
+}
+.login{
+    padding: 10px 15px;
+}
+.field{
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+.input{
+    background-color: rgb(245, 248, 250);
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 2px solid rgb(101, 119, 134);
+}
+.inputTitle{
+    position: relative;
+    top: 0;
+    left: 0;
+    /* height: 15px; */
+    text-align: left;
+}
+span{
+    font-size: .85em;
+    padding: 5px 10px 0 ;
+    color: gray;
+}
+.inputTitle span:hover{
+    cursor: default;
+}
+input{
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: inherit;
+    padding: 2px 10px 5px;
+    height: 30px;
+    font-size: 1.2em;
+}
+input:focus{
+    outline: none;
+}
+.btn-container{
+    box-sizing: border-box;
+    width: 100%;
+}
+.btn{
+    display: flex;
+    margin: 10px;
+    background-color: rgb(29, 161, 242);
+    border-radius: 30px;
+    height: 50px;
+    border: 1px solid rgba(0,0,0,0);
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(26,145,218);
+}
+.btn span{
+    color: rgb(255, 255, 255);
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0;
+}
+.recover-container{
+    margin-top: 20px;
+    text-align: center;
+}
+.recover{
+    display: inline-block;
+}
+.recover span{
+    padding: 0 5px;
+}
+.recover a{
+    color: rgb(27, 149, 224);
+    font-size: 15px;
+}
+.recover a:link{
+    text-decoration: none;
+}
+.recover a:hover{
+    text-decoration: underline;
+}
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
