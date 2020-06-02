@@ -1,0 +1,19 @@
+.navbar{
+    box-sizing: border-box;
+    width: 100vw;
+    justify-content: space-between;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 50px;
+    left: -90px;
+}
+.card{
+    box-sizing: border-box ;
+    padding: 0 ;
+    margin: 20px 0;
+}

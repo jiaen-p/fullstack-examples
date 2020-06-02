@@ -142,3 +142,6 @@ function addMovie() {
     $("#genre").val('');
     $("#url").val('');
 }
+var newMovie = JSON.parse(localStorage.getItem("newPelicula"));
+console.log(newMovie);
+imdb.peliculas.push(newMovie);
