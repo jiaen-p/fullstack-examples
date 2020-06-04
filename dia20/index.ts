@@ -381,4 +381,6 @@ function addMovie(){
 
 let newMovie = JSON.parse(localStorage.getItem("newPelicula"))
 console.log(newMovie)
-imdb.peliculas.push(newMovie)
+if (newMovie !== null){
+    imdb.peliculas.push(newMovie)
+}
