@@ -1,0 +1,11 @@
+{
+  "name": "@jiaen/codenotch-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "codenotch-node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
