@@ -1,4 +1,4 @@
-# day 12
+# day 11
 ## Git branches and collaboration in github
 - git commands 
 - collaboration
