@@ -1,5 +1,7 @@
 # day 7
+
 ## OOP part 1
+
 - basic concepts
 - difference between object and class
 

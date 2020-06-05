@@ -1,5 +1,7 @@
 # day 8
+
 ## OOP part 2
+
 - class creation
 
 Class sintax (constructor, atributes and methods) as well as static methods and instances

@@ -1,6 +1,8 @@
 # day 22
+
 ## async functions
-- syntax 
+
+- syntax
 - eventloop
 - creating my own npm dependency
 

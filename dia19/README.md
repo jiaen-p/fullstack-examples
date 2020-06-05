@@ -1,11 +1,12 @@
 # day 19
+
 ## HTML, CSS and Bootstrap
+
 - html tags
 - css syntax
 - bootstrap
 - grid system
 - fontawesome
-
 
 reto 1-2: exercise to familiarize with bootstraps grid system.
 

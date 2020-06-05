@@ -1,5 +1,7 @@
 # day 14
+
 ## Typescript
+
 - enum
 - custom types
 

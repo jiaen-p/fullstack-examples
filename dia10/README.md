@@ -1,4 +1,6 @@
 # day 10
+
 ## Git
-- git commands 
+
+- git commands
 - collaboration

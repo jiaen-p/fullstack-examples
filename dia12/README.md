@@ -1,6 +1,8 @@
 # day 12
+
 ## Git branches and collaboration in github
-- git commands 
+
+- git commands
 - collaboration
 - solvinig conflicts
 

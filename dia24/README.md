@@ -1,6 +1,8 @@
 # day 24
+
 ## node js backend server
-- syntax 
+
+- syntax
 - http package
 - read/write headers
 - understanding of content types

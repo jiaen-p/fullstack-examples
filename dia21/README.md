@@ -1,8 +1,10 @@
 # day 21
+
 ## HTML, CSS and Bootstrap
+
 - html tags
 - css syntax
-- jquery 
+- jquery
 - forms
 - fontawesome
 - responsive

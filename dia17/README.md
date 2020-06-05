@@ -1,5 +1,7 @@
 # day 17
+
 ## HTML and CSS
+
 - html tags
 - css syntax
 

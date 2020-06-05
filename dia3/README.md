@@ -1,5 +1,7 @@
 # day 3
+
 ## Conditionals
+
 - if/ else if/ else syntax
 - switch syntax
 

@@ -1,5 +1,7 @@
 # day 9
+
 ## Typescript
+
 - types and classes
 - imports and exports
 

@@ -1,5 +1,7 @@
 # day 6
+
 ## Functions
+
 - syntax
 - use cases
 
