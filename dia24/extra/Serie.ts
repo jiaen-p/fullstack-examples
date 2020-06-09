@@ -5,12 +5,11 @@ export class Serie implements Entregable{
     private temporadas: number
     private genero: string
     private creador: string
-    private entregado: boolean
     prestado:boolean
-    constructor(titulo:string, temporadas: number = 3, entregado:boolean = false, genero: string, creador: string){
+    constructor(titulo:string, temporadas: number = 3, prestado:boolean = false, genero: string, creador: string){
         this.titulo = titulo
         this.temporadas = temporadas
-        this.entregado = entregado
+        this.prestado = prestado
         this.genero = genero
         this.creador = creador
     }
@@ -20,7 +19,7 @@ export class Serie implements Entregable{
         Numero de temporadas: ${this.temporadas}
         Genero: ${this.genero}
         Creador: ${this.creador}
-        Entregado: ${this.entregado}
+        Prestado: ${this.prestado}
         `)
     }
 
@@ -37,7 +36,7 @@ export class Serie implements Entregable{
     }
 
     public compareTo(obj: Object):number{
-        return (<Serie>obj).getTemporadas()
+        return (<Serie>obj).getTemporadas() - this.temporadas
     }
 
     public getTitulo(): string {

@@ -24,4 +24,5 @@
 - day 22 -  callback functions
 - day 23 -  asynchrony and eventloop + npm package creation
 - day 24 -  intro to backend development (http protocols and server routing)
-- day 25 -  express framwork and RestAPI design patterns
+- day 25 -  express framwork, RestAPI design patterns, RestAPI Server
+- day 26 -  finish RestAPI Server + finished interface (OOP day 24/ extra)
