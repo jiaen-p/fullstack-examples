@@ -16,38 +16,28 @@ export class Movie{
     public url:string
     public genre:string
     public id: number
-    constructor(title: string,actors: Professional[], releaseYear: number, nationality: string, genre: string, director: Professional, writer: Professional, url: string, id:number){
+    constructor(title: string,actors: Professional[], releaseYear: number, nationality: string, genre: string, director: Professional, url: string, id:number){
         this.title = title
         this.actors = actors
         this.releaseYear = releaseYear
         this.nationality = nationality
         this.genre = genre
         this.director = director
-        this.writer = writer
         this.url = url
         this.id = id
     }
     public print():string{
         let actors = ''
         this.actors.forEach(actor => {
-            actors += `
-            Name: ${actor.name}
-            Id: ${actor.id}`
+            actors += actor.print()
         })
         let text = `
     Title: ${this.title}
     Year released: ${this.releaseYear}
     Nationality: ${this.nationality}
     Actor: ${actors}
-    Director: 
-        Name: ${this.director.name}
-        Id: ${this.director.id}`
+    Director: ${this.director.print()}
+        `
         return (text)
-    }
-    public toJson(){
-        return this
-    }
-    public static instance():Movie{
-        return new Movie(null,null,null,null,null,null,null,null, null)
     }
 }

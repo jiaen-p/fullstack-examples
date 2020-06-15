@@ -6,14 +6,15 @@ export class Libro implements Entregable{
     private horas: number
     private genero: string
     private editorial: string
+    private entregado: boolean
     prestado: boolean
-    constructor(titulo: string, autor: string, horas: number = 40, prestado: boolean = false, genero: string, editorial: string){
+    constructor(titulo: string, autor: string, horas: number = 40, entregado: boolean = false, genero: string, editorial: string){
         this.titulo = titulo,
         this.autor = autor,
         this.horas = horas,
         this.genero = genero,
         this.editorial = editorial,
-        this.prestado = prestado
+        this.entregado = entregado
     }
     public toString():string{
         return(`
@@ -22,7 +23,7 @@ export class Libro implements Entregable{
         Horas estimadas: ${this.horas}
         Genero: ${this.genero}
         Editorial: ${this.editorial}
-        Prestado: ${this.prestado}
+        Entregado: ${this.entregado}
         `)
     }
     public entregar():void{
@@ -38,7 +39,7 @@ export class Libro implements Entregable{
     }
 
     public compareTo(obj: Object):number{
-        return (<Libro>obj).getHoras() - this.horas
+        return (<Libro>obj).getHoras()
     }
 
     public getTitulo(): string {

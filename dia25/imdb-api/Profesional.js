@@ -20,9 +20,6 @@ var Professional = /** @class */ (function () {
     Professional.prototype.print = function () {
         return ("\n        Name: " + this.name + "\n        Id: " + this.id + "\n        \n        ");
     };
-    Professional.prototype.toJson = function () {
-        return this;
-    };
     return Professional;
 }());
 exports.Professional = Professional;

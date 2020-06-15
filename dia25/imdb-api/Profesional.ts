@@ -36,7 +36,4 @@ export class Professional{
         
         `);
     }
-    public toJson():object{
-        return this
-    }
 }
