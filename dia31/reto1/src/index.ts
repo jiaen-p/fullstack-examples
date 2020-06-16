@@ -11,13 +11,14 @@ mongoose.connect("mongodb://localhost:27017/codenotch", { useNewUrlParser: true,
 // .then(data => console.log(data[0].toJSON().songs[0].title))
 // .catch(err => console.log(err))
 
-/*
+
 let artists = []
 for (let i = 1; i < 5; i++){
     let artist = new Artist({
         name: "Artist "+i,
         age: 120,
-        songs:[]
+        songs:[],
+        album:[]
     })
     artists.push(artist._id)
     artist.save()
@@ -37,22 +38,29 @@ for (let i = 1; i< 12; i++){
 let album = new Album({
     title: "Album Many",
     nSongs: songs.length,
-    songs:songs,
+    songs: songs,
     artist: artists
 })
+
 album.save()
+.then(()=>{
+    artists.forEach(p => {
+        let update = {"album": album._id, "songs": songs}
+        console.log(album)
+        Artist.findByIdAndUpdate(p, {$addToSet: update}, (err,data) => {
+            if(err) throw err
+        })
+    })
+})
 .catch(err => console.log(err))
 
-*/
 
-Album.find({_id: "5ee757c059e4612cc9a23054"})
-.populate('songs')
-.populate('artist')
-.exec()
-.then(data => {
-    console.log(data)
-})
-.catch(err => console.error(err))
+
+// Album.find({_id: "5ee757c059e4612cc9a23054"})
+// .populate('songs')
+// .populate('artist')
+// .exec()
+// .catch(err => console.error(err))
 // ---------------------------------------
 // ONE2MANY
 /*
@@ -72,6 +80,7 @@ let artist = new Artist({
     songs: songs
 })
 artist.save()
+.catch(err => console.log(err))
 */
 
 // ------------------------------------------

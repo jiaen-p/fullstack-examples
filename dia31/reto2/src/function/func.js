@@ -98,11 +98,20 @@ function addPhotoUser(data) {
 exports.addPhotoUser = addPhotoUser;
 function timeline(user, res) {
     User_1.User.findById(user)
-        .populate('photos')
+        .populate('follow')
         .exec()
         .then(function (data) {
-        res.send(data.toJSON().photos);
-    })
-        .catch(function (err) { console.error(err); res.sendStatus(500); });
+        var following = [];
+        data.toJSON().follow.forEach(function (u) {
+            following.push(u._id);
+        });
+        User_1.User.find({ _id: following }, { Password: 0 })
+            .populate('photos')
+            .exec(function (err, data) {
+            if (err)
+                throw err;
+            res.send(data);
+        });
+    });
 }
 exports.timeline = timeline;

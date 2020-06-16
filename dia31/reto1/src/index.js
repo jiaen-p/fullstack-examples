@@ -4,6 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = __importDefault(require("mongoose"));
+var Song_1 = require("./models/Song");
+var Artist_1 = require("./models/Artist");
 var Album_1 = require("./models/Album");
 mongoose_1.default.connect("mongodb://localhost:27017/codenotch", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .catch(function (err) { return console.log(err); });
@@ -12,45 +14,52 @@ mongoose_1.default.connect("mongodb://localhost:27017/codenotch", { useNewUrlPar
 // .exec()
 // .then(data => console.log(data[0].toJSON().songs[0].title))
 // .catch(err => console.log(err))
-/*
-let artists = []
-for (let i = 1; i < 5; i++){
-    let artist = new Artist({
-        name: "Artist "+i,
+var artists = [];
+for (var i = 1; i < 5; i++) {
+    var artist = new Artist_1.Artist({
+        name: "Artist " + i,
         age: 120,
-        songs:[]
-    })
-    artists.push(artist._id)
+        songs: [],
+        album: []
+    });
+    artists.push(artist._id);
     artist.save()
-    .catch(err => console.error(err))
+        .catch(function (err) { return console.error(err); });
 }
-let songs = []
-for (let i = 1; i< 12; i++){
-    let song = new Song({
+var songs = [];
+for (var i = 1; i < 12; i++) {
+    var song = new Song_1.Song({
         title: "Song " + i,
-        lenght: Math.floor(Math.random()*20)*10
-    })
-    songs.push(song._id)
+        lenght: Math.floor(Math.random() * 20) * 10
+    });
+    songs.push(song._id);
     song.save()
-    .catch(err => console.log(err))
+        .catch(function (err) { return console.log(err); });
 }
-
-let album = new Album({
+var album = new Album_1.Album({
     title: "Album Many",
     nSongs: songs.length,
-    songs:songs,
+    songs: songs,
     artist: artists
-})
+});
 album.save()
-.catch(err => console.log(err))
-
-*/
+    .then(function () {
+    artists.forEach(function (p) {
+        var update = { "album": album._id, "songs": songs };
+        console.log(album);
+        Artist_1.Artist.findByIdAndUpdate(p, { $addToSet: update }, function (err, data) {
+            if (err)
+                throw err;
+        });
+    });
+})
+    .catch(function (err) { return console.log(err); });
 Album_1.Album.find({ _id: "5ee757c059e4612cc9a23054" })
     .populate('songs')
     .populate('artist')
+    .populate('album')
     .exec()
     .then(function (data) {
-    console.log(data);
 })
     .catch(function (err) { return console.error(err); });
 // ---------------------------------------
@@ -72,6 +81,7 @@ let artist = new Artist({
     songs: songs
 })
 artist.save()
+.catch(err => console.log(err))
 */
 // ------------------------------------------
 // ONE2ONE

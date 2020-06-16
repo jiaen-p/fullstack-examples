@@ -88,10 +88,18 @@ export function addPhotoUser(data){
 
 export function timeline(user:string,res){
     User.findById(user)
-    .populate('photos')
+    .populate('follow')
     .exec()
     .then(data => {
-        res.send(data.toJSON().photos)
+        let following = []
+        data.toJSON().follow.forEach(u => {
+            following.push(u._id)
+        });
+        User.find({_id: following}, {Password: 0})
+        .populate('photos')
+        .exec((err, data) => {
+            if (err) throw err
+            res.send(data)
+        })
     })
-    .catch(err => {console.error(err); res.sendStatus(500)})
 }

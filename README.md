@@ -31,3 +31,4 @@
 - day 29 -  mongoose and express
 - day 30 -  mongoose and RestAPI
 - day 31 -  Mongodb Schema relations
+- day 32 -  SQL Introduction

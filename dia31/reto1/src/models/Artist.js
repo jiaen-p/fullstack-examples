@@ -22,9 +22,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Artist = void 0;
 var mongoose_1 = __importStar(require("mongoose"));
 var Song_1 = require("./Song");
+var Album_1 = require("./Album");
 var artistSchema = new mongoose_1.default.Schema({
     name: String,
     age: Number,
-    songs: [{ type: mongoose_1.Schema.Types.ObjectId, ref: Song_1.Song }]
+    songs: [{ type: mongoose_1.Schema.Types.ObjectId, ref: Song_1.Song }],
+    album: [{ type: mongoose_1.Schema.Types.ObjectId, ref: Album_1.Album }]
 });
 exports.Artist = mongoose_1.default.model('Artist', artistSchema);
