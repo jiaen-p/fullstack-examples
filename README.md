@@ -32,3 +32,4 @@
 - day 30 -  mongoose and RestAPI
 - day 31 -  Mongodb Schema relations
 - day 32 -  SQL Introduction
+- day 33 -  SQL CRUD operations
