@@ -33,3 +33,5 @@
 - day 31 -  Mongodb Schema relations
 - day 32 -  SQL Introduction
 - day 33 -  SQL CRUD operations
+- day 34 -  SQL Built-in functions
+- day 35 -  SQL Database architecture design example
