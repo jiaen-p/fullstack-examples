@@ -1,0 +1,49 @@
+<form>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" #ciudad placeholder="Ciudad">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" #pais placeholder="Pais">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" #codigo placeholder="Codigo Ciudad">
+    </div>
+
+    <div class="btn-group">
+      <button type="reset" class="btn btn-primary" on-click="add(ciudad.value, pais.value, codigo.value)"><i class="fas fa-plus-circle"></i></button>
+    </div>
+  </div>
+  <br  *ngIf="anadido">
+  <div *ngIf="anadido" class="alert alert-primary">
+    {{accion}}
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" #codigo2 placeholder="Codigo Ciudad">
+    </div>
+    <div class="btn-group">
+      <button type="reset" class="btn btn-primary" on-click="getOne(codigo2.value)"><i class="fas fa-search"></i></button>
+      <button type="reset" class="btn btn-success" on-click="edit(ciudad.value, pais.value, codigo.value)"><i class="fas fa-edit"></i></button>
+      <button type="reset" class="btn btn-danger" on-click="delete(codigo2.value)"><i class="fas fa-trash"></i></button>
+    </div>
+  </div>
+  <br>
+  <table *ngIf="encontrado" class="table accordion" id="table">
+    <tr>
+        <th>Ciudad</th>
+        <th>Pais</th>
+        <th>Codigo de pais</th>
+    </tr>
+    <tr>
+        <td>{{encontrado.ciudad}}</td>
+        <td>{{encontrado.pais}}</td>
+        <td>{{encontrado.codigo}}</td>
+    </tr>
+  </table>
+  <div *ngIf="buscado" class="alert alert-primary">
+    {{buscado}}
+  </div>
+</form>

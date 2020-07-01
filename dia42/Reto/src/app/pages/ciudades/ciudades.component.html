@@ -1,0 +1,5 @@
+<div class="container-fluid">
+    <app-vista-listado-tabla [ciudades]="ciudades" (detalles)="mostrar($event)"></app-vista-listado-tabla>
+    <app-vista-nuevo (ciudadNuevo)="add($event)"></app-vista-nuevo>
+    <app-vista-detalle [ciudades]="ciudades" [selected]="selected" [unidad]="unidad" (cambiar)="cambiarUnidad()"></app-vista-detalle>
+</div>

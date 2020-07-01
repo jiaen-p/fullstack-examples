@@ -1,13 +1,13 @@
 "use strict";
-exports.__esModule = true;
-exports.Baraja = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Baraja = exports.Carta = exports.palos = void 0;
 var palos;
 (function (palos) {
     palos["espadas"] = "espadas";
     palos["bastos"] = "bastos";
     palos["oros"] = "oros";
     palos["copas"] = "copas";
-})(palos || (palos = {}));
+})(palos = exports.palos || (exports.palos = {}));
 var Carta = /** @class */ (function () {
     function Carta(n, p) {
         this.numero = n;
@@ -15,6 +15,7 @@ var Carta = /** @class */ (function () {
     }
     return Carta;
 }());
+exports.Carta = Carta;
 var Baraja = /** @class */ (function () {
     function Baraja(palo, num) {
         var _this = this;

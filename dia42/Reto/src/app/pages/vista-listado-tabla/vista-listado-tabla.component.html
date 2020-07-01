@@ -1,0 +1,19 @@
+<h3>Reto 1</h3>
+<div *ngIf="ciudades.length === 0">
+    <p>No hay ciudades</p>
+</div>
+<table class="table accordion" id="table">
+    <tr>
+        <th>Ciudad</th>
+        <th>Pais</th>
+        <th>Codigo de pais</th>
+    </tr>
+    <tr *ngFor="let ciudad of ciudades; let even=even; let i = index" [ngClass]="even ? 'even': null" on-click=mostrar(i) style="cursor: pointer;">
+        <td>{{ciudad.nombre}}</td>
+        <td>{{ciudad.pais}}</td>
+        <td>{{ciudad.codigo}}</td>
+    </tr>
+</table>
+
+<br>
+<hr>

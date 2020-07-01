@@ -1,18 +1,18 @@
-enum palos{
+export enum palos{
     espadas = "espadas",
     bastos = "bastos",
     oros = "oros",
     copas = "copas"
 }
-type Numero = 1|2|3|4|5|6|7|10|11|12
+export type Numero = 1|2|3|4|5|6|7|10|11|12
 
-type Palo = keyof typeof palos
+export type Palo = keyof typeof palos
 
-interface carta{
+export interface carta{
     numero: Numero
     palo: Palo
 }
-class Carta implements carta{
+export class Carta implements carta{
     numero: Numero
     palo: Palo
     constructor(n: Numero, p: Palo){

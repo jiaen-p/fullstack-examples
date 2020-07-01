@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <h3>Reto 1</h3>
+    <div *ngIf="ciudades.length === 0">
+        <p>No hay ciudades</p>
+    </div>
+    <table class="table accordion" id="table">
+        <tr>
+            <th>Ciudad</th>
+            <th>Pais</th>
+            <th>Codigo de pais</th>
+        </tr>
+        <tr *ngFor="let ciudad of ciudades; let even=even; let i = index" [ngClass]="even ? 'even': null" on-click=mostrar(i) style="cursor: pointer;">
+            <td>{{ciudad.nombre}}</td>
+            <td>{{ciudad.pais}}</td>
+            <td>{{ciudad.codigo}}</td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <h3>Reto 2</h3>
+    
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" #ciudad placeholder="Ciudad">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" #pais placeholder="Pais">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" #codigo placeholder="Codigo Ciudad">
+        </div>
+        <div class="col">
+          <button type="reset" class="btn btn-primary" on-click="add(ciudad.value, pais.value, codigo.value)">Añadir ciudad</button>
+        </div>
+      </div>
+    </form>
+    <br><br>
+    <div *ngIf="selected !== null" class="jumbotron">
+      <h1 class="display-4">{{ciudades[selected].nombre}}</h1>
+      <p class="lead">Temperatura: {{ (ciudades[selected].clima.temperatura)| temperaturaConverter : unidad}}</p>
+      <p class="lead">Probabilidad de precipitacion: {{ciudades[selected].clima.precipitaciones | percent}}</p>
+      <p class="lead">Viento: {{ciudades[selected].clima.viento}} m/s</p>
+      <button class="btn btn-primary" on-click=cambiarUnidad()>ºC <=> ºF</button>
+    </div>
+    <br><hr>
+</div>

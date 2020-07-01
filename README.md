@@ -2,13 +2,13 @@
 
 ## The project is categorized by days
 
-- day 3 -   control flow
-- day 4 -   loops and data structures
-- day 5 -   arithmetic
-- day 6 -   module import and exports
-- day 7 -   object oriented programming I: objects and classes
-- day 8 -   object oriented programming II: methods
-- day 9 -   intro to typescript
+- day 03 -   control flow
+- day 04 -   loops and data structures
+- day 05 -   arithmetic
+- day 06 -   module import and exports
+- day 07 -   object oriented programming I: objects and classes
+- day 08 -   object oriented programming II: methods
+- day 09 -   intro to typescript
 - day 10 -  intro to git
 - day 11 -  object oriented programming + typescript I (collaboration day I)
 - day 12 -  object oriented programming + typescript II (collaboration day II)
@@ -35,3 +35,9 @@
 - day 33 -  SQL CRUD operations
 - day 34 -  SQL Built-in functions
 - day 35 -  SQL Database architecture design example
+- day 36 -  SQL Database architecture and design example
+- day 38 -  Angular Intro I
+- day 40 -  Angular Intro II
+- day 41 -  Angular Pipes
+- day 42 -  Angular communication between parent/child
+- day 43 -  Angular services and router

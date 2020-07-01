@@ -1,0 +1,18 @@
+<h3>Reto 2</h3>
+<form>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" #ciudad placeholder="Ciudad">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" #pais placeholder="Pais">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" #codigo placeholder="Codigo Ciudad">
+      </div>
+      <div class="col">
+        <button type="reset" class="btn btn-primary" on-click="add(ciudad.value, pais.value, codigo.value)">Añadir ciudad</button>
+      </div>
+    </div>
+</form>
+<br><br>

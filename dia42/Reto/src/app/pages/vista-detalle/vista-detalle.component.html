@@ -1,0 +1,8 @@
+<div *ngIf="selected !== null" class="jumbotron">
+    <h1 class="display-4">{{ciudades[selected].nombre}}</h1>
+    <p class="lead">Temperatura: {{ (ciudades[selected].clima.temperatura)| temperaturaConverter : unidad}}</p>
+    <p class="lead">Probabilidad de precipitacion: {{ciudades[selected].clima.precipitaciones | percent}}</p>
+    <p class="lead">Viento: {{ciudades[selected].clima.viento}} m/s</p>
+    <button class="btn btn-primary" on-click=cambiarUnidad()>ºC <=> ºF</button>
+  </div>
+<br><hr>
