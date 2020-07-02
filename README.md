@@ -41,4 +41,5 @@
 - day 41 -  Angular Pipes
 - day 42 -  Angular communication between parent/child
 - day 43 -  Angular services and router
-- day 44 -  Fullstack project
+- day 44 -  Fullstack project (Angular + RestAPI + Mysql)
+- day 45 -  Fullstack project (Angular + RestAPI + MongoDB)
