@@ -1,0 +1,27 @@
+<form>
+  <div class="form-row">
+    <div class="col">
+      <input type="number" class="form-control" #id placeholder="Introduce Id o dejalo vacio para mostrar todos">
+    </div>
+    <button class="btn btn-primary" on-click="mostrar(id.value); $event.preventDefault(); id.value=null">mostrar</button>
+  </div>
+</form>
+<br>
+<table class="table" *ngIf="datos">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Interprete</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let disco of datos">
+      <tr>
+        <th scope="row">{{disco.id}}</th>
+        <td>{{disco.titulo}}</td>
+        <td>{{disco.interprete}}</td>
+        <td>{{disco.anyoPublicacion}}</td>
+      </tr>
+    </tbody>
+  </table>

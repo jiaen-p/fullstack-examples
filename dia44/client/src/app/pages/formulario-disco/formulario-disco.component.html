@@ -1,0 +1,25 @@
+<form>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" #titulo placeholder="Titulo">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" #interprete placeholder="Interprete">
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+        <div class="col">
+          <input type="number" class="form-control" #fecha placeholder="Año de publicación">
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" #id placeholder="Id">
+        </div>
+    </div>
+    <br>
+    <div class="btn-group" style="display: flex; max-width: 600px; margin: auto;">
+        <button type="reset" class="btn btn-success" on-click="add(titulo.value, interprete.value, fecha.value, id.value)"><i class="fas fa-plus-square"></i></button>
+        <button type="reset" class="btn btn-primary" on-click="modificar(titulo.value, interprete.value, fecha.value, id.value)"><i class="fas fa-edit"></i></button>
+        <button type="reset" class="btn btn-danger" on-click="borrar(id.value)"><i class="fas fa-trash"></i></button>
+    </div>
+</form>
