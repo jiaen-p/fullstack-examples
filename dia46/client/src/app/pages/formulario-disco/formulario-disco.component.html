@@ -1,0 +1,20 @@
+<form [formGroup]="myForm">
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" #titulo placeholder="Titulo" formControlName="titulo" [ngClass]="{'is-invalid': !myForm.get('titulo').valid}">
+        <div class="invalid-feedback" *ngIf="!myForm.get('titulo').valid">Añadir titulo</div>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" #interprete placeholder="Interprete" formControlName="interprete" [ngClass]="{'is-invalid': !myForm.get('interprete').valid}">
+        <div class="invalid-feedback" *ngIf="!myForm.get('interprete').valid">Añadir interprete</div>
+      </div>
+      <div class="col">
+        <input type="number" class="form-control" #fecha placeholder="Año de publicación" formControlName="anyoPublicacion" [ngClass]="{'is-invalid': !myForm.get('anyoPublicacion').valid}">
+        <div class="invalid-feedback" *ngIf="!myForm.get('anyoPublicacion').valid">Añadir año publicación</div>
+      </div>
+    </div>
+    <br>
+    <div class="btn-group" style="display: flex; max-width: 600px; margin: auto;">
+        <button type="reset" class="btn btn-success" on-click="add()" [disabled]="myForm.invalid"><i class="fas fa-plus-square"></i></button>
+    </div>
+</form>
