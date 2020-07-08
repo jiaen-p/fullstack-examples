@@ -44,3 +44,4 @@
 - day 44 -  Fullstack project (Angular + RestAPI + Mysql)
 - day 45 -  Fullstack project (Angular + RestAPI + MongoDB)
 - day 46 -  Angular Forms
+- day 47 -  Ionic Framework Introduction

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario">
+    <ion-item>
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input formControlName="titulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Interprete</ion-label>
+      <ion-input formControlName="interprete"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha de Publicacion</ion-label>
+      <ion-input type="number" formControlName="anyoPublicacion"></ion-input>
+    </ion-item>
+    <ion-button type="reset" expand="block" (click)="add()" [disabled]="formulario.invalid">Añadir</ion-button>
+  </form>
+  <ion-button expand="block" routerLink="/" >Home</ion-button>
+</ion-content>
