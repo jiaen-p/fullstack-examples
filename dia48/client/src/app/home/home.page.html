@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Geolocalizacion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="promissLatidud && promissLongitud">
+    <h2>Promesa</h2>
+    <p>Longitud: {{promissLongitud}}</p>
+    <p>Latitud: {{promissLatidud}}</p>
+  </div>
+  <div *ngIf="observableLatitud && observableLongitud">
+    <hr>
+    <h2>Watch</h2>
+    <p>Longitud: {{observableLongitud}}</p>
+    <p>Latitud: {{observableLatitud}}</p>
+  </div>
+  <ion-button (click)="getPromiss()">
+    Promiss
+  </ion-button>
+  <ion-button (click)="getObservable()">
+    Watch
+  </ion-button>
+</ion-content>
